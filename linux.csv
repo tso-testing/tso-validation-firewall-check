@@ -1,3 +1,6 @@
 Hostname,Check-Host,Port,IPAddress,CPUCore,RAM,Disk,Check-Host-ip
-sdcgisazapmdw05,sdcgisazapmdw06,22,10.193.177.215,2,3.84256,296.3,10.193.177.216
-sdcgisazapmdw06,sdcgisazapmdw05,80,10.193.177.216,1,0.953384,21.5,10.193.177.215
+etctqpvsapwlg01,ltcgigdcapmdw40,22,10.77.6.11,1,1,1,10.197.12.80
+,ltcgigdcapmdw40,8030,,,,,10.197.12.80
+,ltcgigdcapmdw40,8040,,,,,10.197.12.80
+,ltcgigdcapmdw40,9080,,,,,10.197.12.80
+,ltcgigdcapmdw40,9443,,,,,10.197.12.80
