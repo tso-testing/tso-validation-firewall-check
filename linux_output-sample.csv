@@ -1,0 +1,8 @@
+Hostname input,Hostname output,Check-host,Port,IP input,IP fact,CPU core input,CPU core fact,RAM input,RAM fact,Disk input,Disk fact,Message
+vm1,vm1,,,192.168.3.128,192.168.3.128,1,1,0.953384,0.953384,21.5,21.5,Passed
+,,vm2 port, 22 is open,,,,,,,,,
+,,vm3 port, 22 is open,,,,,,,,,
+vm2,vm2,,,192.168.3.129,192.168.3.129,1,1,0.953384,0.953384,21.5,21.5,Passed
+,,vm1 port, 80 is open,,,,,,,,,
+,,vm1 port, 22 is open,,,,,,,,,
+vm3,vm3,,,192.168.3.130,192.168.3.130,1,1,0.953384,0.953384,21.5,21.5,Passed
