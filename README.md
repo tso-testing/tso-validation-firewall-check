@@ -66,4 +66,3 @@ See the linux.csv or windows.csv.
 # Example Output
 See the linux_output-sample.csv.
 
-# tso-validation-firewall-check
