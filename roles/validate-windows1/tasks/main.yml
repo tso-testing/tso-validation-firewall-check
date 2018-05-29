@@ -34,7 +34,7 @@
   run_once: true 
   
 - name: Create wins3.ini inventory 2
-  shell: awk -F',' 'FNR > 1 { print  $1 " ansible_host="$4 }' temp0 > temp
+  shell: awk -F',' 'FNR > 1 { print  $4 " ansible_host="$1 }' temp0 > temp
   delegate_to: localhost
   run_once: true
 
@@ -66,25 +66,38 @@
   run_once: true 
     
 - name: Create wins3.ini inventory 5
-  #shell: echo ansible_user=test >> tempwins
-  shell: echo ansible_user=administrator >> tempwins
+  shell: echo ansible_user={{ win_ansible_user }} >> tempwins
+  delegate_to: localhost
+  run_once: true 
+
+- name: Create wins3.ini inventory 5.1
+  shell: echo ansible_password={{ win_ansible_password }} >> tempwins
   delegate_to: localhost
   run_once: true 
 
 - name: Create wins3.ini inventory 6
-  shell: echo ansible_connection=winrm >> tempwins
+  shell: echo ansible_connection={{ win_ansible_connection }} >> tempwins
   delegate_to: localhost
   run_once: true 
   
 - name: Create wins3.ini inventory 7
-  shell: echo ansible_winrm_transport=basic >> tempwins
+  shell: echo ansible_winrm_transport={{ win_ansible_winrm_transport }} >> tempwins
   delegate_to: localhost
   run_once: true 
+  
 
 - name: Create wins3.ini inventory 8
-  shell: echo ansible_winrm_server_cert_validation=ignore >> tempwins
+  shell: echo ansible_winrm_server_cert_validation={{ win_ansible_winrm_server_cert_validation }} >> tempwins
   delegate_to: localhost
   run_once: true 
+  when: win_ansible_winrm_transport == "basic"
+
+- name: Create wins3.ini inventory 8.1
+  shell: echo ansible_port={{ win_ansible_port }} >> tempwins
+  delegate_to: localhost
+  run_once: true 
+  when: win_ansible_winrm_transport == "kerberos"
+
   
 - name: Create wins3.ini inventory 9
   shell: cat tempwins >> wins3.ini
@@ -125,7 +138,7 @@
   run_once: true 
 
 - name: Create wins2.ini inventory 2.1
-  shell: awk -F',' 'FNR > 1 { print $2 " ansible_host="$8 }' temp03 > temp3
+  shell: awk -F',' 'FNR > 1 { print $8 " ansible_host="$2 }' temp03 > temp3
   delegate_to: localhost
   run_once: true
 
@@ -161,4 +174,3 @@
   shell: ./create-loop.py windows.csv
   delegate_to: localhost
   run_once: true
-
