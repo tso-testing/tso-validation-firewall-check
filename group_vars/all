@@ -1,2 +1,9 @@
 ---
 #ansible_become_pass: 
+
+win_ansible_user: user1@TEST001.ORG
+win_ansible_password: Clark123456
+win_ansible_connection: winrm
+win_ansible_winrm_transport: kerberos
+win_ansible_winrm_server_cert_validation: ignore
+win_ansible_port: 5985
