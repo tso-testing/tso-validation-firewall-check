@@ -1,3 +1,3 @@
 Hostname,Check-Host,Port,IPAddress,CPUCore,RAM,Disk,Check-Host-ip
-WIN2,WIN3,9000,192.168.3.133,1,2,60,192.168.3.134
-WIN3,WIN2,8000,192.168.3.134,1,2,21.5,192.168.3.133
+sdcgisazapmdw24,sdcgisazapmdw25,9000,10.193.176.62,1,2,60,10.193.176.63
+sdcgisazapmdw25,sdcgisazapmdw24,8000,10.193.176.63,1,2,21.5,10.193.176.62
