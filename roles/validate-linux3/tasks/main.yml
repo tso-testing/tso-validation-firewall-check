@@ -31,15 +31,15 @@
   
   
 
-- name: Check NC  
-  shell: rpm -qa nmap-ncat*
-  register: install
+#- name: Check NC  
+#  shell: rpm -qa nmap-ncat*
+#  register: install
  
-- name: Install NC
-  yum: 
-    name: nmap-ncat
-    state: present
-  when: install is succeeded    
+#- name: Install NC
+#  yum: 
+#    name: nmap-ncat
+#    state: present
+  #when: install is succeeded    
 
 - name: Get hostname
   shell: echo "{{ ansible_hostname }}"  > /tmp/{{ ansible_hostname }}_data.csv
