@@ -1,3 +1,2 @@
 Hostname,Check-Host,Port,IPAddress,CPUCore,RAM,Disk,Check-Host-ip
-vm1,win2,90,192.168.3.132,1,0.953384,21.5,192.168.3.133
-vm2,win3,80,192.168.3.135,1,0.953384,21.5,192.168.3.134
+etcdtovsdvwh001,sdcgisazwhweb12.cihs.ad.gov.on.ca,8040,10.77.8.11,,,,10.193.177.239
