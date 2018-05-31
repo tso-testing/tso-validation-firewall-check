@@ -1,7 +1,7 @@
 ---
 #ansible_become_pass: 
 
-win_ansible_user: user1@TEST001.ORG
+win_ansible_user: user1@TEST007.ORG
 win_ansible_password: Clark123456
 win_ansible_connection: winrm
 win_ansible_winrm_transport: kerberos
